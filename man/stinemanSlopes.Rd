@@ -1,7 +1,7 @@
 \name{stinemanSlopes}
 \alias{stinemanSlopes}
 
-\title{Estimates the slope of an interpolating function using an arc.}
+\title{Estimate the slope of an interpolating function using an arc}
 
 \description{Returns estimates of the slope of an interpolating function that
  runs through a set of points in the xy-plane. The slopes are calculated
@@ -13,8 +13,8 @@
 }
 
 \arguments{
-\item{x,y}{Coordinates of points defining the interpolating function.}
-\item{scale}{If true (default) then the x and y values are normalized prior to the slope calculation.} 
+\item{x,y}{coordinates of points defining the interpolating function.}
+\item{scale}{if true (default) then the x and y values are normalized prior to the slope calculation.} 
 }
 
 \value{

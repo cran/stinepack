@@ -1,7 +1,7 @@
 \name{stinterp}
 \alias{stinterp}
 
-\title{A consistently well behaved method of interpolation. }
+\title{A consistently well behaved method of interpolation}
 \description{Returns the values of an interpolating function that
  runs through a set of points in the xy-plane according
  to the algorithm of Stineman (1980).
@@ -12,15 +12,21 @@ stinterp(x,y,xout,yp,method=c("scaledstineman","stineman","parabola"))
 }
 
 \arguments{
-\item{x,y}{Coordinates of points defining the interpolating function.}
-\item{xout}{The x-coordinate where the interpolant is to be found.}
-\item{yp}{Slopes of the interpolating function at x. Optional: only given if they are known, else the argument is not used.}
-\item{method}{ Method for computing the slope at the given points 
+\item{x,y}{coordinates of points defining the interpolating function.
+NAs are not allowed, but see \code{\link{na.stinterp}} 
+for gap-filling based on \code{stinterp}.}
+\item{xout}{the x-coordinate where the interpolant is to be found.}
+\item{yp}{slopes of the interpolating function at x. 
+Optional: only given if they are known, else the argument is not used.}
+\item{method}{method for computing the slope at the given points 
 if the slope is not known. With \code{method}="stineman",  Stineman's
-original method based on an interpolating circle is used. Use 
- \code{method}="scaledstineman" if scaling of x and y is to be carried out
-before Stineman's method is applied, and use  \code{method}="parabola" to calculate the slopes from a parabola through every three points. Partial argument matching is supported (for example
-\code{m}="pa" instead of \code{method}="parabola").}
+original method based on an interpolating circle is used. 
+Use \code{method}="scaledstineman" if scaling of x and y is to 
+be carried out before Stineman's method is applied, and use 
+\code{method}="parabola" to calculate the slopes from a 
+parabola through every three points. Partial argument 
+matching is supported (for example \code{m}="pa" instead 
+of \code{method}="parabola").}
 }
 
 \value{\code{stinterp} returns a list with components 'x' and 'y'
@@ -137,7 +143,8 @@ generate `wild' points makes it attractive as a general purpose procedure".
 This interpolation method has been implemented in Matlab and Python in addition to R.
 }
 
-\seealso{\code{\link{stinemanSlopes}} and \code{\link{parabolaSlopes}}.}
+\seealso{\code{\link{na.stinterp}}, 
+\code{\link{stinemanSlopes}} and \code{\link{parabolaSlopes}}.}
 
 \references{
   Stineman, R. W. \emph{A Consistently Well Behaved Method of Interpolation.}   

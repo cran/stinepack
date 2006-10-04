@@ -11,11 +11,15 @@ function (x, y, xout, yp, method = c("scaledstineman", "stineman",
         stop("x must have 2 or more elements")
     if (length(x) != length(y)) 
         stop("x must have the same number of elements as y")
+    if (any(is.na(x)) || any(is.na(x)) || any(is.na(xout))) 
+        stop("NAs in x, y or xout are not allowed")
     if (!missing(yp)) {
         if (!is.vector(yp) || !is.numeric(yp)) 
             stop("yp must be a numeric vector")
         if (length(y) != length(yp)) 
             stop("When specified, yp must have the same number of elements as y")
+        if (any(is.na(yp)))
+           stop("NAs in yp are not allowed")
         if (!missing(method)) 
             stop("Method should not be specified if yp is given")
     }

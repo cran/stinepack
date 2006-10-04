@@ -1,7 +1,7 @@
 \name{parabolaSlopes}
 \alias{parabolaSlopes}
 
-\title{Estimates the slope of an interpolating function using a parabola.}
+\title{Estimate the slope of an interpolating function using a parabola}
 
 \description{Returns estimates of the slope of an interpolating function that 
  runs through a set of points in the xy-plane.}
@@ -11,7 +11,7 @@
 }
 
 \arguments{
-\item{x,y}{Coordinates of points defining the interpolating function.}
+\item{x,y}{coordinates of points defining the interpolating function.}
 }
 
 \value{

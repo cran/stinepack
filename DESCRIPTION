@@ -1,9 +1,9 @@
 Package: stinepack
-Title: Stineman interpolation package
-Version: 1.0
-Author: Tomas Johannesson & Halldor Bjornsson, Icelandic Met. Office
+Title: Stineman, a consistently well behaved method of interpolation
+Version: 1.1
+Author: Tomas Johannesson & Halldor Bjornsson, Icelandic Met. Office; Gabor Grothendieck
 Depends:
-Description: Interpolation routine using the Stineman algorithm
+Description: A consistently well behaved method of interpolation based on piecewise rational functions using Stineman's algorithm
 Maintainer: Tomas Johannesson <tj@vedur.is>
 License: GPL2
-Packaged: Sat Sep 30 17:48:11 2006; tj
+Packaged: Wed Oct  4 21:50:10 2006; tj
