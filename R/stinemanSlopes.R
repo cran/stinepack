@@ -23,12 +23,12 @@ function (x, y, scale = FALSE)
         yp[2:m1] <- (dy[-m1] * dx2dy2p + dy[-1] * dx2dy2m)/(dx[-m1] * 
             dx2dy2p + dx[-1] * dx2dy2m)
         s <- dy[1]/dx[1]
-        if ((s > 0 && s > yp[2]) || (s < 0 && s < yp[2])) 
+        if ((s >= 0 && s >= yp[2]) || (s <= 0 && s <= yp[2])) 
             yp[1] <- 2 * s - yp[2]
         else yp[1] <- s + abs(s) * (s - yp[2])/(abs(s) + abs(s - 
             yp[2]))
         s <- dy[m1]/dx[m1]
-        if ((s > 0 && s > yp[m1]) || (s < 0 && s < yp[m1])) 
+        if ((s >= 0 && s >= yp[m1]) || (s <= 0 && s <= yp[m1])) 
             yp[m] <- 2 * s - yp[m1]
         else yp[m] <- s + abs(s) * (s - yp[m1])/(abs(s) + abs(s - 
             yp[m1]))
