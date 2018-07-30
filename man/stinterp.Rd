@@ -60,7 +60,7 @@ lines(xo,xo^2*((s-2)*xo-s+3),col=2) }
 
 ## Interpolate a smooth curve
 #This example illustrates that the interpolation procedure
-#reproduces a smooth function with known splopes at the specified
+#reproduces a smooth function with known slopes at the specified
 #points very well. If the slopes are not known, both methods for
 #estimating the slopes at the specified points (the default method
 #and method="parabola") lead to good interpolating functions, but
